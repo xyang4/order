@@ -1,5 +1,5 @@
-CREATE DATABASE  IF NOT EXISTS `order`
-USE `order`;
+CREATE DATABASE  IF NOT EXISTS `jenkins-order`
+USE `jenkins-order`;
 
 DROP TABLE IF EXISTS `categories`;
 CREATE TABLE `categories` (

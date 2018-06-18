@@ -9,8 +9,7 @@
 # export TOMCAT_APP_PATH=tomcat在部署机器上的路径
 
 ### base 函数
-killTomcat()
-{
+killTomcat(){
     pid=`ps -ef|grep tomcat|grep java|awk '{print $2}'`
     echo "tomcat Id list :$pid"
     if [ "$pid" = "" ]
@@ -39,7 +38,7 @@ mv order.war ROOT.war
 
 # 启动Tomcat
 cd $TOMCAT_APP_PATH/
-sh bin/startup.sh
+sh bin/startup.sh ; tail -f logs/catalina.out
 
 
 
